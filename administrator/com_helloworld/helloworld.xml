@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1.0" method="upgrade">
+    <name>Hello World!</name>
+    <author>Ric Pham</author>
+    <creationDate>November 08, 2022</creationDate>
+    <copyright>(C) 2005 - 2020 Open Source Matters. All rights reserved.</copyright>
+    <license>Ric Public License Test; see LICENSE.txt</license>
+    <authorEmail>thach@r-digital.tech</authorEmail>
+    <authorUrl>www.joomla.org</authorUrl>
+    <version>0.0.7</version>
+    <description>Description of the Hello World Component ...</description>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>helloworld.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+    </files>
+
+    <administration>
+        <menu link="index.php?option=com_helloworld">Hello World!</menu>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>helloworld.php</filename>
+            <filename>controller.php</filename>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+</extension>
+
+
